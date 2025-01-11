@@ -1,0 +1,128 @@
+.tokenomics-tab {
+    padding: 20px;
+    background-color: #ffffff;
+    color: #000000;
+    margin-top: 10px;
+  }
+  
+  .distribution-chart {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+  
+  .chart {
+    width: 150px;
+    height: 150px;
+  }
+  
+  .circle {
+    fill: none;
+    stroke-width: 2.8;
+  }
+  
+  .crowdsale {
+    stroke: #007bff;
+  }
+  
+  .foundation {
+    stroke: #ffc107;
+  }
+  
+  .labels div {
+    margin: 10px 0;
+  }
+  
+  .crowdsale-label,
+  .foundation-label {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    margin-right: 8px;
+  }
+  
+  .crowdsale-label {
+    background-color: #007bff;
+  }
+  
+  .foundation-label {
+    background-color: #ffc107;
+  }
+  
+  .tokenomics-tab {
+    padding: 20px;
+    background-color: #ffffff;
+    color: #000000;
+    font-family: Arial, sans-serif;
+  }
+  
+  h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .distribution-chart {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+  
+  .chart {
+    width: 150px;
+    height: 150px;
+  }
+  
+  .circle-background {
+    stroke: #e0e0e0;
+    stroke-width: 2.8;
+  }
+  
+  .circle {
+    stroke-width: 2.8;
+    fill: none;
+    transform: rotate(-90deg);
+    transform-origin: center;
+  }
+  
+  .crowdsale {
+    stroke: #007bff;
+  }
+  
+  .foundation {
+    stroke: #ffc107;
+  }
+  
+  .labels {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .labels div {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+  }
+  
+  .crowdsale-label,
+  .foundation-label {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    margin-right: 8px;
+    border-radius: 50%;
+  }
+  
+  .crowdsale-label {
+    background-color: #007bff;
+  }
+  
+  .foundation-label {
+    background-color: #ffc107;
+  }
+  
+  p {
+    margin-top: 20px;
+    line-height: 1.6;
+  }
+  

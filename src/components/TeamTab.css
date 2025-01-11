@@ -1,0 +1,74 @@
+.team-tab {
+  padding: 20px;
+  background-color: #ffffff;
+  color: #000000;
+  font-family: Arial, sans-serif;
+  margin-top: 10px;
+}
+
+h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+p {
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+.team-cards {
+  display: flex;
+  flex-direction: column; /* Ensures cards are stacked vertically */
+  align-items: center; /* Centers cards horizontally */
+  gap: 20px; /* Space between rows */
+}
+
+.team-card {
+  background-color: #f9f9f9;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 20px;
+  width: 100%;
+  /* max-width: 400px;  */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.team-card:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.team-image {
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  margin-bottom: 15px;
+}
+
+h4 {
+  font-size: 18px;
+  margin: 10px 0;
+}
+
+.designation {
+  font-size: 14px;
+  font-weight: bold;
+  color: #555555;
+  margin-bottom: 10px;
+}
+
+@media (max-width: 480px) {
+  .team-card {
+    padding: 15px;
+  }
+
+  h4 {
+    font-size: 16px;
+  }
+
+  .team-image {
+    width: 100px;
+    height: 100px;
+  }
+}

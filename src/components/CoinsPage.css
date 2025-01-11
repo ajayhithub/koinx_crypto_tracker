@@ -1,0 +1,105 @@
+/* General container styling */
+.coins-page {
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    color: #333;
+}
+
+/* Section headings */
+.coins-page h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #222;
+    text-align: left;
+}
+
+/* Grid layout for coins */
+.coins-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+/* Individual coin card styling */
+.coin-card {
+    position: relative;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 15px;
+    text-align: center;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    overflow: hidden;
+}
+
+.coin-card canvas {
+    margin-top: 15px;
+    height: 150px !important;
+    width: 100% !important;
+}
+
+
+.coin-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Coin image */
+.coin-card img {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 10px;
+}
+
+/* Coin name and symbol */
+.coin-card h3 {
+    font-size: 18px;
+    margin: 10px 0 5px;
+}
+
+/* Coin price */
+.coin-card p {
+    font-size: 14px;
+    margin: 5px 0;
+}
+
+/* Positive price change styling */
+.positive {
+    color: #28a745; /* Green color */
+}
+
+/* Negative price change styling */
+.negative {
+    color: #dc3545; /* Red color */
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .coins-grid {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    }
+}
+
+@media (max-width: 480px) {
+    .coins-page {
+        padding: 10px;
+    }
+
+    .coin-card {
+        padding: 10px;
+    }
+
+    .coin-card h3 {
+        font-size: 16px;
+    }
+
+    .coin-card p {
+        font-size: 12px;
+    }
+
+    .coin-card img {
+        width: 40px;
+        height: 40px;
+    }
+}

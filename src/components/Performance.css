@@ -1,0 +1,85 @@
+.performance-container {
+    background: #f9fafc; /* Soft background for the container */
+    padding: 30px 20px; 
+    border-radius: 10px; /* Rounded corners for the container */
+    margin: 20px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Slight shadow for depth */
+    /* max-width: 800px;  */
+    margin-left: auto;
+    margin-right: auto; /* Center the container */
+}
+
+.performance-title {
+    font-size: 1.5rem; /* Slightly bigger font */
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.performance-chart, .year-performance {
+    margin-bottom: 30px;
+}
+
+.chart-labels, .year-labels {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    font-size: 0.95rem;
+    color: #555;
+}
+
+.chart-bar, .year-chart-bar {
+    position: relative;
+    height: 12px; /* Make the bars slightly taller */
+    background: #e0e0e0; /* Light grey background for the bar */
+    border-radius: 6px;
+    overflow: hidden;
+    margin-bottom: 10px;
+}
+
+.bar-progress {
+    position: absolute;
+    height: 100%;
+    background: linear-gradient(90deg, #16a34a, #4ade80); /* Green gradient */
+    transition: width 0.3s ease-in-out;
+    border-radius: 6px; /* Rounded corners for the bar */
+}
+
+.chart-values, .year-values {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1rem;
+    color: #333;
+    font-weight: 500;
+}
+
+.value {
+    font-weight: bold;
+    color: #333; /* Make the value bold for better contrast */
+}
+
+.chart-bar, .year-chart-bar {
+    border-radius: 6px; /* Rounded edges for the bar */
+}
+
+.chart-values span, .year-values span {
+    font-size: 0.9rem;
+    color: #333;
+    font-weight: 500;
+    margin-top: 5px;
+}
+
+/* Add subtle hover effect for value spans */
+.chart-values span:hover, .year-values span:hover {
+    color: #007bff; /* Change color on hover */
+    cursor: pointer;
+}
+
+/* Add a subtle divider between sections */
+.performance-chart::after, .year-performance::after {
+    content: '';
+    display: block;
+    margin-top: 15px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 15px;
+}

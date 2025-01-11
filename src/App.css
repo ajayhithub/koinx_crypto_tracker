@@ -1,0 +1,18 @@
+.app {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  /* background-color: #f9f9f9; */
+}
+
+.content {
+  display: flex;
+  gap: 20px;
+}
+
+.left {
+  flex: 2;
+}
+
+.right {
+  flex: 1;
+}
