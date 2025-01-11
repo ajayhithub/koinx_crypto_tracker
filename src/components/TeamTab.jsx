@@ -13,7 +13,7 @@ const TeamTab = () => {
   // }, []);
 
   useEffect(() => {
-    // Simulating API data with default mock values
+    
     const mockData = [
       {
         id: 1,
@@ -38,7 +38,7 @@ const TeamTab = () => {
       },
     ];
 
-    // Simulate a delay to mimic an API call
+   
     setTimeout(() => {
       setTeamData(mockData);
     }, 1000);

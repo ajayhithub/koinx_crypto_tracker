@@ -10,19 +10,6 @@ const OverviewTab = () => {
         yearHigh: "49,743.83",
         current: 50, // Percentage
     };
-
-    // const fundamentalsData = [
-    //     { label: "Bitcoin Price", value: "$16,815.46" },
-    //     { label: "Market Cap", value: "$323,507,290,047" },
-    //     { label: "Market Cap Dominance", value: "38.343%" },
-    //     { label: "24h Low / 24h High", value: "$16,382.07 / $16,874.12" },
-    //     { label: "7d Low / 7d High", value: "$16,382.07 / $16,874.12" },
-    //     { label: "Trading Volume", value: "$23,249,202,782" },
-    //     { label: "Market Cap Rank", value: "#1" },
-    //     { label: "All-Time High", value: "$69,044.77 -75.6%" },
-    //     { label: "All-Time Low", value: "$67.81 +24729.1%" },
-    // ];
-
       const mockData = {
       price: "$16,815.46",
       marketCap: "$323,507,290,047",

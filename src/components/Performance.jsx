@@ -1,5 +1,5 @@
 
-import "./Performance.css"; // Add custom styles for this component
+import "./Performance.css"; 
 
 const Performance = ({ performance }) => {
     const { todaysLow, todaysHigh, yearLow, yearHigh, current } = performance;

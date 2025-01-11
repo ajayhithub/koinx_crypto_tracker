@@ -2,7 +2,7 @@ import "./Tabs.css";
 
 const Tabs = ({ tabs, activeTab, onTabClick }) => {
     const handleTabClick = (index) => {
-        onTabClick(index); // Notify the parent component about the active tab
+        onTabClick(index); 
     };
 
     return (

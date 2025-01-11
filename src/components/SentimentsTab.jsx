@@ -7,19 +7,19 @@ const SentimentsTab = () => {
   const [analystEstimates, setAnalystEstimates] = useState({ buy: 0, hold: 0, sell: 0 });
 
   useEffect(() => {
-    // Fetch Key Events data
+    
     axios
-      .get("https://api.coingecko.com/api/v3/global") // Replace with an appropriate endpoint
+      .get("https://api.coingecko.com/api/v3/global") 
       .then((response) => {
         const mockEvents = [
           { title: "Bitcoin Reaches $40K", description: "BTC surpassed $40,000 for the first time." },
           { title: "Ethereum Merge Completed", description: "Ethereum successfully transitioned to PoS." },
         ];
-        setKeyEvents(mockEvents); // Replace with actual response data if available
+        setKeyEvents(mockEvents); 
       })
       .catch((error) => console.error("Error fetching key events:", error));
 
-    // Fetch Analyst Estimates data
+    
     axios
       .get("https://api.coingecko.com/api/v3/simple/price", {
         params: {
@@ -30,7 +30,7 @@ const SentimentsTab = () => {
         },
       })
       .then((response) => {
-        const mockEstimates = { buy: 50, hold: 30, sell: 20 }; // Replace with actual response data if available
+        const mockEstimates = { buy: 50, hold: 30, sell: 20 }; 
         setAnalystEstimates(mockEstimates);
       })
       .catch((error) => console.error("Error fetching analyst estimates:", error));
@@ -38,7 +38,6 @@ const SentimentsTab = () => {
 
   return (
     <div className="sentiments-tab">
-      {/* Key Events Section */}
       <h2>Sentiment</h2>
       <h3>Key Events</h3>
       <div className="key-events">
@@ -54,7 +53,7 @@ const SentimentsTab = () => {
         )}
       </div>
 
-      {/* Analyst Estimates Section */}
+     
       <h3>Analyst Estimates</h3>
       <div className="analyst-estimates">
         <div className="circular-buy">{analystEstimates.buy}%</div>

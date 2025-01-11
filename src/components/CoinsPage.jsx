@@ -16,10 +16,10 @@ ChartJS.register(CategoryScale, LinearScale, PointElement, LineElement, Tooltip)
 const CoinsPage = () => {
     const [recommendedCoins, setRecommendedCoins] = useState([]);
     const [trendingCoins, setTrendingCoins] = useState([]);
-    const [historicalData, setHistoricalData] = useState({}); // Store historical data for each coin
+    const [historicalData, setHistoricalData] = useState({}); 
 
     useEffect(() => {
-        // Fetch data for "You May Also Like" section
+        
         axios.get('https://api.coingecko.com/api/v3/coins/markets', {
             params: {
                 vs_currency: 'usd',
@@ -32,7 +32,7 @@ const CoinsPage = () => {
             setRecommendedCoins(response.data);
         });
 
-        // Fetch data for "Trending Coins" section
+      
         axios.get('https://api.coingecko.com/api/v3/search/trending').then((response) => {
             const trending = response.data.coins.map((coin) => ({
                 id: coin.item.id,
@@ -42,19 +42,19 @@ const CoinsPage = () => {
             }));
             setTrendingCoins(trending);
 
-            // Fetch historical data for each trending coin
+           
             trending.forEach((coin) => {
                 axios
                     .get(`https://api.coingecko.com/api/v3/coins/${coin.id}/market_chart`, {
                         params: {
                             vs_currency: 'usd',
-                            days: 7, // Last 7 days
+                            days: 7, 
                         },
                     })
                     .then((res) => {
                         setHistoricalData((prevData) => ({
                             ...prevData,
-                            [coin.id]: res.data.prices, // Store price data for each coin
+                            [coin.id]: res.data.prices, 
                         }));
                     })
                     .catch((error) => console.error(`Failed to fetch data for ${coin.id}:`, error));
@@ -62,43 +62,43 @@ const CoinsPage = () => {
         });
     }, []);
 
-    // Helper function to prepare chart data
+   
     const prepareChartData = (prices) => {
         if (!prices) return null;
         return {
-            labels: prices.map(() => ''), // Empty labels for the x-axis
+            labels: prices.map(() => ''), 
             datasets: [
                 {
                     label: '',
-                    data: prices.map((price) => price[1]), // Use price values
+                    data: prices.map((price) => price[1]), 
                     borderColor: '#0071bd',
                     backgroundColor: 'rgba(0, 113, 189, 0.2)',
                     tension: 0.4,
                     borderWidth: 2,
-                    pointRadius: 0, // Remove points
+                    pointRadius: 0, 
                 },
             ],
         };
     };
 
-    // Chart options to remove axes
+   
     const chartOptions = {
         responsive: true,
         maintainAspectRatio: false,
         scales: {
             x: {
-                display: false, // Hide x-axis
+                display: false, 
             },
             y: {
-                display: false, // Hide y-axis
+                display: false, 
             },
         },
         plugins: {
             legend: {
-                display: false, // Hide the legend
+                display: false, 
             },
             tooltip: {
-                enabled: false, // Disable tooltips
+                enabled: false, 
             },
         },
     };
@@ -125,7 +125,7 @@ const CoinsPage = () => {
                     <div key={coin.id} className="coin-card">
                         <img src={coin.image} alt={coin.name} />
                         <h3>{coin.name} ({coin.symbol.toUpperCase()})</h3>
-                        {/* Render the graph if data is available */}
+                       
                         {historicalData[coin.id] ? (
                             <Line
                                 data={prepareChartData(historicalData[coin.id])}

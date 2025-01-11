@@ -1,9 +1,9 @@
-import './NewsInsightsTab.css'; // Import the CSS for this component
+import './NewsInsightsTab.css'; 
 
 const NewsInsightsTab = () => {
   return (
     <div className="news-insights-container">
-      {/* About Bitcoin Section */}
+     
       <section className="section about-bitcoin">
         <h1>About Bitcoin</h1>
         <h2>What is Bitcoin?</h2>
@@ -28,7 +28,7 @@ const NewsInsightsTab = () => {
         </p>
       </section>
 
-      {/* Already Holding Bitcoin Section */}
+      
       <section className="section holding-bitcoin">
         <h2>Already Holding Bitcoin?</h2>
         <div className="holding-bitcoin">

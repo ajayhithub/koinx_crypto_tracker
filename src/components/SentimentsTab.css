@@ -1,125 +1,119 @@
-/* General styles for the sentiments tab */
 .sentiments-tab {
-    padding: 20px;
-    font-family: Arial, sans-serif;
-    background-color: #ffffff; /* White background */
-    color: #000000; /* Black text */
-    margin-top: 10px;
-  }
-  
-  /* Section headers */
-  .sentiments-tab h2 {
-    font-size: 24px;
-    margin-bottom: 20px;
-    color: #000000; /* Black text */
-  }
-  
-  .sentiments-tab h3 {
-    font-size: 20px;
-    margin-bottom: 15px;
-    color: #000000; /* Black text */
-  }
-  
-  /* Key Events Section */
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  background-color: #ffffff;
+  color: #000000;
+  margin-top: 10px;
+}
+
+.sentiments-tab h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #000000;
+}
+
+.sentiments-tab h3 {
+  font-size: 20px;
+  margin-bottom: 15px;
+  color: #000000;
+}
+
+.key-events {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-bottom: 30px;
+  justify-content: space-between;
+}
+
+.key-event-card {
+  flex: 1 1 calc(45% - 10px);
+  background-color: #ffffff;
+  color: #000000;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s, box-shadow 0.2s;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.key-event-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.key-event-card h4 {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: #000000;
+}
+
+.key-event-card p {
+  font-size: 14px;
+  color: #555555;
+  line-height: 1.6;
+}
+
+.analyst-estimates {
+  margin-top: 20px;
+}
+
+.circular-buy {
+  font-size: 24px;
+  font-weight: bold;
+  color: #000000;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.bar-chart-container {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.bar-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.bar-background {
+  flex: 1;
+  height: 8px;
+  background-color: #e0e0e0;
+  border-radius: 4px;
+  overflow: hidden;
+  position: relative;
+}
+
+.bar-fill-buy {
+  height: 100%;
+  background-color: #28a745;
+  border-radius: 4px;
+}
+
+.bar-fill-hold {
+  height: 100%;
+  background-color: #ffc107;
+  border-radius: 4px;
+}
+
+.bar-fill-sell {
+  height: 100%;
+  background-color: #dc3545;
+  border-radius: 4px;
+}
+
+@media (max-width: 768px) {
   .key-events {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    margin-bottom: 30px;
-    justify-content: space-between;
-  }
-  
-  .key-event-card {
-    flex: 1 1 calc(45% - 10px); /* Adjusts card size responsively */
-    background-color: #ffffff; /* White background */
-    color: #000000; /* Black text */
-    padding: 20px;
-    border-radius: 12px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-    transition: transform 0.2s, box-shadow 0.2s;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-  }
-  
-  .key-event-card:hover {
-    transform: translateY(-5px); /* Lift on hover */
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Darker shadow on hover */
-  }
-  
-  .key-event-card h4 {
-    font-size: 18px;
-    font-weight: 600;
-    margin-bottom: 10px;
-    color: #000000; /* Black text */
-  }
-  
-  .key-event-card p {
-    font-size: 14px;
-    color: #555555; /* Slightly lighter black for descriptions */
-    line-height: 1.6;
-  }
-  
-  /* Analyst Estimates Section */
-  .analyst-estimates {
-    margin-top: 20px;
-  }
-  
-  .circular-buy {
-    font-size: 24px;
-    font-weight: bold;
-    color: #000000; /* Black text */
-    text-align: center;
-    margin-bottom: 20px;
-  }
-  
-  .bar-chart-container {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-  }
-  
-  .bar-row {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-  }
-  
-  .bar-background {
-    flex: 1;
-    height: 8px;
-    background-color: #e0e0e0; /* Light gray background for bar */
-    border-radius: 4px;
-    overflow: hidden;
-    position: relative;
-  }
-  
-  .bar-fill-buy {
-    height: 100%;
-    background-color: #28a745; /* Green for "Buy" */
-    border-radius: 4px;
-  }
-  
-  .bar-fill-hold {
-    height: 100%;
-    background-color: #ffc107; /* Yellow for "Hold" */
-    border-radius: 4px;
-  }
-  
-  .bar-fill-sell {
-    height: 100%;
-    background-color: #dc3545; /* Red for "Sell" */
-    border-radius: 4px;
-  }
-  
-  /* Responsive Design for Cards */
-  @media (max-width: 768px) {
-    .key-events {
       flex-direction: column;
-    }
-  
-    .key-event-card {
-      flex: 1 1 100%;
-    }
   }
-  
+
+  .key-event-card {
+      flex: 1 1 100%;
+  }
+}

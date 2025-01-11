@@ -18,7 +18,7 @@ import CoinsPage from './components/CoinsPage.jsx';
 import "./components/Fundamentals.css";
 
 const App = () => {
-  const [activeTab, setActiveTab] = useState(0); // Change state to track index of the active tab
+  const [activeTab, setActiveTab] = useState(0); 
   const [bitcoinData, setBitcoinData] = useState({});
   const [trendingCoins, setTrendingCoins] = useState([]);
   const mockData = {
@@ -68,7 +68,7 @@ const App = () => {
   };
 
   useEffect(() => {
-      // Fetch Bitcoin Data
+      
       axios.get('https://api.coingecko.com/api/v3/simple/price', {
           params: {
               ids: 'bitcoin',
@@ -79,14 +79,14 @@ const App = () => {
           setBitcoinData(response.data.bitcoin);
       });
 
-      // Fetch Trending Coins
+     
       axios.get('https://api.coingecko.com/api/v3/search/trending').then((response) => {
           const coins = response.data.coins.map((coin) => ({
               id: coin.item.id,
               name: coin.item.name,
               symbol: coin.item.symbol,
               image: coin.item.large,
-              change: coin.item.price_btc, // Adjust if necessary
+              change: coin.item.price_btc, 
           }));
           setTrendingCoins(coins);
       });
@@ -113,8 +113,8 @@ const App = () => {
           <div>
               <Tabs
                   tabs={["Overview", "Fundamentals", "News Insights", "Sentiments", "Team", "Technicals", "Tokenomics"]}
-                  activeTab={activeTab} // Pass activeTab as prop to Tabs
-                  onTabClick={setActiveTab} // Notify parent component on tab change
+                  activeTab={activeTab} 
+                  onTabClick={setActiveTab} 
               />
               {renderActiveTabContent()}
           </div>

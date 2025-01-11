@@ -1,16 +1,16 @@
 .performance-container {
-    background: #f9fafc; /* Soft background for the container */
+    background: #f9fafc; 
     padding: 30px 20px; 
-    border-radius: 10px; /* Rounded corners for the container */
+    border-radius: 10px; 
     margin: 20px 0;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Slight shadow for depth */
-    /* max-width: 800px;  */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    
     margin-left: auto;
-    margin-right: auto; /* Center the container */
+    margin-right: auto; 
 }
 
 .performance-title {
-    font-size: 1.5rem; /* Slightly bigger font */
+    font-size: 1.5rem; 
     font-weight: 600;
     color: #333;
     margin-bottom: 20px;
@@ -30,8 +30,8 @@
 
 .chart-bar, .year-chart-bar {
     position: relative;
-    height: 12px; /* Make the bars slightly taller */
-    background: #e0e0e0; /* Light grey background for the bar */
+    height: 12px; 
+    background: #e0e0e0; 
     border-radius: 6px;
     overflow: hidden;
     margin-bottom: 10px;
@@ -40,10 +40,9 @@
 .bar-progress {
     position: absolute;
     height: 100%;
-    background: linear-gradient(90deg, #16a34a, #4ade80); /* Green gradient */
+    background: linear-gradient(90deg, #16a34a, #4ade80);
     transition: width 0.3s ease-in-out;
-    border-radius: 6px; /* Rounded corners for the bar */
-}
+    border-radius: 6px; 
 
 .chart-values, .year-values {
     display: flex;
@@ -55,11 +54,11 @@
 
 .value {
     font-weight: bold;
-    color: #333; /* Make the value bold for better contrast */
+    color: #333; 
 }
 
 .chart-bar, .year-chart-bar {
-    border-radius: 6px; /* Rounded edges for the bar */
+    border-radius: 6px; 
 }
 
 .chart-values span, .year-values span {
@@ -69,13 +68,13 @@
     margin-top: 5px;
 }
 
-/* Add subtle hover effect for value spans */
+
 .chart-values span:hover, .year-values span:hover {
-    color: #007bff; /* Change color on hover */
+    color: #007bff;
     cursor: pointer;
 }
 
-/* Add a subtle divider between sections */
+
 .performance-chart::after, .year-performance::after {
     content: '';
     display: block;

@@ -18,19 +18,6 @@ const Fundamentals = ({ data }) => {
         low52w,
     } = data;
 
-    // Convert price strings to numbers for calculation
-    // const parsePrice = (price) => parseFloat(price.replace(/[$,]/g, ""));
-
-    // const low24 = parsePrice(low24h);
-    // const high24 = parsePrice(high24h);
-    // const low52 = parsePrice(low52w);
-    // const high52 = parsePrice(high52w);
-    // const currentPrice = parsePrice(price);
-
-    // // Calculate percentages for the performance bars
-    // const todayPercentage = ((currentPrice - low24) / (high24 - low24)) * 100;
-    // const yearPercentage = ((currentPrice - low52) / (high52 - low52)) * 100;
-
     return (
         <div className="fundamentals-container">   
             <h2>Fundamentals</h2>

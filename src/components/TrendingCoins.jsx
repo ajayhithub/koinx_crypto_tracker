@@ -5,7 +5,7 @@ const TrendingCoins = ({ coins }) => {
         <div className="trending-coins">
             <h3>Trending Coins (24h)</h3>
             <ul>
-                {coins.slice(0, 8).map((coin) => ( // Limit to the first 7 coins
+                {coins.slice(0, 8).map((coin) => ( 
                     <li key={coin.id} className="coin-item">
                         <img src={coin.image} alt={`${coin.name} logo`} className="coin-logo" />
                         <div className="coin-details">

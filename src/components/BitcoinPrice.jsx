@@ -7,12 +7,12 @@ const BitcoinPrice = ({ usdPrice, inrPrice, change }) => {
     const [bitcoinLogo, setBitcoinLogo] = useState('');
 
     useEffect(() => {
-        // Fetch the details about Bitcoin
+      
         axios.get('https://api.coingecko.com/api/v3/coins/bitcoin')
             .then((response) => {
                 const { market_cap_rank, image } = response.data;
                 setBitcoinRank(market_cap_rank);
-                setBitcoinLogo(image.large); // Set the logo image URL
+                setBitcoinLogo(image.large); 
             })
             .catch((error) => console.error("Error fetching Bitcoin details:", error));
     }, []);

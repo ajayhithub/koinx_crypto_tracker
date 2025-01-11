@@ -18,9 +18,9 @@ p {
 
 .team-cards {
   display: flex;
-  flex-direction: column; /* Ensures cards are stacked vertically */
-  align-items: center; /* Centers cards horizontally */
-  gap: 20px; /* Space between rows */
+  flex-direction: column;
+  align-items: center; 
+  gap: 20px; 
 }
 
 .team-card {
