@@ -5,6 +5,7 @@ import Chart from './components/Chart.jsx';
 import GetStarted from './components/GetStarted.jsx';
 import TrendingCoins from './components/TrendingCoins.jsx';
 import './App.css';
+// jk
 import axios from 'axios';
 import Tabs from "./components/Tabs.jsx";
 import OverviewTab from "./components/OverviewTab.jsx";
