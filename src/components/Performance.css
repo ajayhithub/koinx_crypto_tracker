@@ -43,6 +43,7 @@
     background: linear-gradient(90deg, #16a34a, #4ade80);
     transition: width 0.3s ease-in-out;
     border-radius: 6px; 
+}
 
 .chart-values, .year-values {
     display: flex;
